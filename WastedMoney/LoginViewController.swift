@@ -29,7 +29,8 @@ class LoginViewController: UIViewController {
         passwordTxtFld.placeholder = "Password...."
         passwordTxtFld.isSecureTextEntry = true
         
-        
+        emailTxtFld.delegate = self
+        passwordTxtFld.delegate = self
     }
     
     private func setupKeyboardHiding() {
@@ -63,6 +64,16 @@ class LoginViewController: UIViewController {
     
 }
 
+
+//MARK: - ext for view and kboard delegate
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+}
+
+//MARK: - extensin for Responder
 extension UIResponder {
     private struct Static {
         static weak var responder: UIResponder?
@@ -78,3 +89,4 @@ extension UIResponder {
         Static.responder = self
     }
 }
+
