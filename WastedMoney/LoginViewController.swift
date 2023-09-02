@@ -16,6 +16,14 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
+    }
+    
+    func setupUI() {
+        emailTxtFld.placeholder = "Please enter email...."
+        emailTxtFld.keyboardType = .emailAddress
+        passwordTxtFld.placeholder = "Password...."
+        passwordTxtFld.isSecureTextEntry = true
     }
 
     //MARK: - Buttons
