@@ -17,15 +17,41 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        setupKeyboardHiding()
     }
+
+    
+    //MARK: - Funcs
     
     func setupUI() {
         emailTxtFld.placeholder = "Please enter email...."
         emailTxtFld.keyboardType = .emailAddress
         passwordTxtFld.placeholder = "Password...."
         passwordTxtFld.isSecureTextEntry = true
+        
+        
     }
-
+    
+    private func setupKeyboardHiding() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(sender: NSNotification) {
+        guard let userInfo = sender.userInfo,
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+              let currentTxtFld = UIResponder.currentFirst() as? UITextField else {return}
+        
+        let keyboardTopY = keyboardFrame.cgRectValue.origin.y
+        let convertedTextFieldFrame = view.convert(currentTxtFld.frame, from: currentTxtFld.superview)
+        let textFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
+        
+        if textFieldBottomY > keyboardTopY {
+            let textBoxY = convertedTextFieldFrame.origin.y
+            let newFrameY = (textBoxY - keyboardTopY / 2) * -1
+            view.frame.origin.y = newFrameY
+        }
+    }
+    
     //MARK: - Buttons
     
 
@@ -37,3 +63,18 @@ class LoginViewController: UIViewController {
     
 }
 
+extension UIResponder {
+    private struct Static {
+        static weak var responder: UIResponder?
+    }
+    
+    static func currentFirst() -> UIResponder? {
+        Static.responder = nil
+        UIApplication.shared.sendAction(#selector(UIResponder._trap), to: nil, from: nil, for: nil)
+        return Static.responder
+    }
+    
+    @objc private func _trap() {
+        Static.responder = self
+    }
+}
