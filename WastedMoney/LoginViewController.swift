@@ -67,8 +67,10 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func loginTaped(_ sender: Any) {
-        Auth.auth().signIn(withEmail: emailTxtFld.text!, password: passwordTxtFld.text!) { [weak self] authResult, error in
-            guard let strongSelf = self else { return }
+        if let email = emailTxtFld.text, let password = passwordTxtFld.text {
+            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+                guard let strongSelf = self else { return }
+            }
         }
     }
     
