@@ -16,6 +16,7 @@
 		BF7B6CEF2AA3AEBC006E3B57 /* WastedMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B6CEE2AA3AEBC006E3B57 /* WastedMoneyTests.swift */; };
 		BF7B6CF92AA3AEBC006E3B57 /* WastedMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B6CF82AA3AEBC006E3B57 /* WastedMoneyUITests.swift */; };
 		BF7B6CFB2AA3AEBC006E3B57 /* WastedMoneyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B6CFA2AA3AEBC006E3B57 /* WastedMoneyUITestsLaunchTests.swift */; };
+		BF7B6D082AA4BFFC006E3B57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF7B6D072AA4BFFC006E3B57 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BF7B6CF42AA3AEBC006E3B57 /* WastedMoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WastedMoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7B6CF82AA3AEBC006E3B57 /* WastedMoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WastedMoneyUITests.swift; sourceTree = "<group>"; };
 		BF7B6CFA2AA3AEBC006E3B57 /* WastedMoneyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WastedMoneyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BF7B6D072AA4BFFC006E3B57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				BF7B6CE02AA3AEBB006E3B57 /* Assets.xcassets */,
 				BF7B6CE22AA3AEBB006E3B57 /* LaunchScreen.storyboard */,
 				BF7B6CE52AA3AEBB006E3B57 /* Info.plist */,
+				BF7B6D072AA4BFFC006E3B57 /* GoogleService-Info.plist */,
 			);
 			path = WastedMoney;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				BF7B6CE42AA3AEBB006E3B57 /* LaunchScreen.storyboard in Resources */,
 				BF7B6CE12AA3AEBB006E3B57 /* Assets.xcassets in Resources */,
+				BF7B6D082AA4BFFC006E3B57 /* GoogleService-Info.plist in Resources */,
 				BF7B6CDF2AA3AEBA006E3B57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
