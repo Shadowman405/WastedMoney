@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseCore
+import FirebaseFirestore
 
 class LoginViewController: UIViewController {
     
@@ -31,6 +34,7 @@ class LoginViewController: UIViewController {
         
         emailTxtFld.delegate = self
         passwordTxtFld.delegate = self
+        FirebaseApp.configure()
     }
     
     private func setupKeyboardHiding() {
@@ -63,6 +67,9 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func loginTaped(_ sender: Any) {
+        Auth.auth().signIn(withEmail: emailTxtFld.text!, password: passwordTxtFld.text!) { [weak self] authResult, error in
+            guard let strongSelf = self else { return }
+        }
     }
     
     @IBAction func registerTaped(_ sender: Any) {

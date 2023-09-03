@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>890458563172-v24oo4b3jfn461kjoujqv1v5vtdbqgjd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.890458563172-v24oo4b3jfn461kjoujqv1v5vtdbqgjd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBYhGw-VEHKx6vRBBLhop8rTYzXfvKB69o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>890458563172</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>mmg.WastedMoney</string>
+	<key>PROJECT_ID</key>
+	<string>wastedmoney-a7da1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>wastedmoney-a7da1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:890458563172:ios:f35874862ce74e6359f571</string>
+</dict>
+</plist>
