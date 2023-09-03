@@ -38,21 +38,21 @@
                                     <action selector="loginTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aC7-iB-2fC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaZ-v9-cEd">
-                                <rect key="frame" x="119" y="668" width="154" height="35"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZ1-Bl-vsF">
+                                <rect key="frame" x="16" y="59" width="361" height="373"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vN7-gv-1Wb">
+                                <rect key="frame" x="119" y="673" width="154" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="To registration"/>
                                 <connections>
-                                    <action selector="registerTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lwi-ye-jMV"/>
-                                    <segue destination="Up1-OB-YQl" kind="show" id="uPW-7d-TPI"/>
+                                    <action selector="loginTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VMV-Pt-tqb"/>
+                                    <segue destination="Up1-OB-YQl" kind="show" id="m8p-xG-qN3"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZ1-Bl-vsF">
-                                <rect key="frame" x="16" y="59" width="361" height="373"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

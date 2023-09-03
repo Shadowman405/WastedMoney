@@ -34,7 +34,9 @@ class LoginViewController: UIViewController {
         
         emailTxtFld.delegate = self
         passwordTxtFld.delegate = self
-        FirebaseApp.configure()
+        if FirebaseApp.app() == nil {
+            FirebaseApp.configure()
+        }
     }
     
     private func setupKeyboardHiding() {
@@ -70,6 +72,7 @@ class LoginViewController: UIViewController {
         if let email = emailTxtFld.text, let password = passwordTxtFld.text {
             Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
                 guard let strongSelf = self else { return }
+                
             }
         }
     }
