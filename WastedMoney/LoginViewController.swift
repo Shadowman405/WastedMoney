@@ -35,6 +35,8 @@ class LoginViewController: UIViewController {
     
     private func setupKeyboardHiding() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        //
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func keyboardWillShow(sender: NSNotification) {
@@ -51,6 +53,10 @@ class LoginViewController: UIViewController {
             let newFrameY = (textBoxY - keyboardTopY / 2) * -1
             view.frame.origin.y = newFrameY
         }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        view.frame.origin.y = 0
     }
     
     //MARK: - Buttons
@@ -88,5 +94,6 @@ extension UIResponder {
     @objc private func _trap() {
         Static.responder = self
     }
+    
 }
 
