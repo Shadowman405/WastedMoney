@@ -74,9 +74,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func registerTaped(_ sender: Any) {
-    }
-    
 }
 
 
