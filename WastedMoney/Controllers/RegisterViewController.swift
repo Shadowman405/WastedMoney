@@ -22,6 +22,8 @@ class RegisterViewController: UIViewController {
         if FirebaseApp.app() == nil {
             FirebaseApp.configure()
         }
+        
+        emailRegTxtFld.keyboardType = .emailAddress
     }
     
     @IBAction func RegisterTaped(_ sender: Any) {
