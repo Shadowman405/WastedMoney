@@ -92,7 +92,10 @@
                             <outlet property="delegate" destination="JRP-Sr-pxf" id="g5i-p9-RfX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="r3c-IO-Xw3"/>
+                    <navigationItem key="navigationItem" id="r3c-IO-Xw3">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="r3r-wC-OGJ"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3k-2o-8a7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,6 +156,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FjP-DP-zck">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dZM-cg-2tM"/>
                     </connections>

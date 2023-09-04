@@ -35,5 +35,4 @@ class PersonListTableViewController: UITableViewController {
         cell.textLabel?.text = "\(person.name) \(person.lastName)  aka - \(person.nickName)"
         return cell
     }
-    
 }
