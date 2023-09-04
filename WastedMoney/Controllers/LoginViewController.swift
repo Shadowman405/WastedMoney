@@ -42,10 +42,9 @@ class LoginViewController: UIViewController {
     //MARK: - Buttons
 
     @IBAction func loginTaped(_ sender: Any) {
-        if let email = emailTxtFld.text, let password = passwordTxtFld.text {
-            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-                guard let strongSelf = self else { return }
-                
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if user != nil {
+                self.performSegue(withIdentifier: "toPersons", sender: nil)
             }
         }
     }
