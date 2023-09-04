@@ -61,6 +61,7 @@
                         <outlet property="emailTxtFld" destination="tHT-Eq-lkS" id="Wcm-dx-fsP"/>
                         <outlet property="loginImg" destination="bZ1-Bl-vsF" id="QxT-mV-bhl"/>
                         <outlet property="passwordTxtFld" destination="6Q3-ju-OIT" id="ASU-cE-3WF"/>
+                        <segue destination="JRP-Sr-pxf" kind="show" identifier="toPersons" id="T3V-5T-nRX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -72,7 +73,7 @@
             <objects>
                 <tableViewController id="JRP-Sr-pxf" customClass="PersonListTableViewController" customModule="WastedMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="S5m-dJ-Jsh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -90,6 +91,7 @@
                             <outlet property="delegate" destination="JRP-Sr-pxf" id="g5i-p9-RfX"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="r3c-IO-Xw3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3k-2o-8a7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

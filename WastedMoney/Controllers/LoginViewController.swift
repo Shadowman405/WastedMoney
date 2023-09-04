@@ -39,6 +39,27 @@ class LoginViewController: UIViewController {
         }
     }
     
+    //MARK: - Buttons
+
+    @IBAction func loginTaped(_ sender: Any) {
+        if let email = emailTxtFld.text, let password = passwordTxtFld.text {
+            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+                guard let strongSelf = self else { return }
+                
+            }
+        }
+    }
+    
+}
+
+
+//MARK: - ext for view and kboard delegate
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    
     private func setupKeyboardHiding() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         //
@@ -63,28 +84,6 @@ class LoginViewController: UIViewController {
     
     @objc func keyboardWillHide(notification: NSNotification) {
         view.frame.origin.y = 0
-    }
-    
-    //MARK: - Buttons
-    
-
-    @IBAction func loginTaped(_ sender: Any) {
-        if let email = emailTxtFld.text, let password = passwordTxtFld.text {
-            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-                guard let strongSelf = self else { return }
-                
-            }
-        }
-    }
-    
-}
-
-
-//MARK: - ext for view and kboard delegate
-
-extension LoginViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
     }
 }
 
