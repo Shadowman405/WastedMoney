@@ -40,6 +40,7 @@
 		BF7B6D332AA4C0CA006E3B57 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BF7B6D322AA4C0CA006E3B57 /* FirebaseStorage */; };
 		BF7B6D352AA4C0CA006E3B57 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = BF7B6D342AA4C0CA006E3B57 /* FirebaseStorageCombine-Community */; };
 		BF7B6D372AA4C939006E3B57 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B6D362AA4C939006E3B57 /* RegisterViewController.swift */; };
+		BF7B6D3A2AA645BB006E3B57 /* PersonListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B6D392AA645BB006E3B57 /* PersonListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		BF7B6CFA2AA3AEBC006E3B57 /* WastedMoneyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WastedMoneyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BF7B6D072AA4BFFC006E3B57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF7B6D362AA4C939006E3B57 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		BF7B6D392AA645BB006E3B57 /* PersonListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			children = (
 				BF7B6CDB2AA3AEBA006E3B57 /* LoginViewController.swift */,
 				BF7B6D362AA4C939006E3B57 /* RegisterViewController.swift */,
+				BF7B6D392AA645BB006E3B57 /* PersonListTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7B6CDC2AA3AEBA006E3B57 /* LoginViewController.swift in Sources */,
+				BF7B6D3A2AA645BB006E3B57 /* PersonListTableViewController.swift in Sources */,
 				BF7B6CD82AA3AEBA006E3B57 /* AppDelegate.swift in Sources */,
 				BF7B6CDA2AA3AEBA006E3B57 /* SceneDelegate.swift in Sources */,
 				BF7B6D372AA4C939006E3B57 /* RegisterViewController.swift in Sources */,
