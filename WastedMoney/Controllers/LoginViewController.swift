@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTxtFld: UITextField!
     @IBOutlet weak var passwordTxtFld: UITextField!
     
+    private var isLogedIn = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,13 +41,25 @@ class LoginViewController: UIViewController {
         }
     }
     
+    
     //MARK: - Buttons
 
     @IBAction func loginTaped(_ sender: Any) {
         Auth.auth().addStateDidChangeListener { auth, user in
             if user != nil {
-                self.performSegue(withIdentifier: "toPersons", sender: nil)
+                self.isLogedIn = true
+            } else {
+                self.isLogedIn = false
             }
+        }
+        
+        if isLogedIn == true {
+            self.performSegue(withIdentifier: "toPersons", sender: nil)
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Wrong credentials", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alert.addAction(cancelAction)
+            present(alert, animated: true)
         }
     }
     
