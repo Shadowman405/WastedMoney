@@ -42,15 +42,14 @@
                                 <rect key="frame" x="16" y="59" width="361" height="373"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vN7-gv-1Wb">
-                                <rect key="frame" x="119" y="673" width="154" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBB-4P-ofv">
+                                <rect key="frame" x="119" y="677" width="154" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" red="0.33631956909999999" green="0.97048253880000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="To registration"/>
                                 <connections>
-                                    <action selector="loginTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VMV-Pt-tqb"/>
-                                    <segue destination="Up1-OB-YQl" kind="show" id="m8p-xG-qN3"/>
+                                    <segue destination="Up1-OB-YQl" kind="show" id="JY1-QS-mrT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,7 +61,7 @@
                         <outlet property="emailTxtFld" destination="tHT-Eq-lkS" id="Wcm-dx-fsP"/>
                         <outlet property="loginImg" destination="bZ1-Bl-vsF" id="QxT-mV-bhl"/>
                         <outlet property="passwordTxtFld" destination="6Q3-ju-OIT" id="ASU-cE-3WF"/>
-                        <segue destination="JRP-Sr-pxf" kind="presentation" identifier="toPersons" modalPresentationStyle="fullScreen" id="REK-8E-ceZ"/>
+                        <segue destination="JRP-Sr-pxf" kind="show" identifier="toPersons" id="REK-8E-ceZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
