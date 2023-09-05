@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseCore
+import FirebaseFirestore
 
 class PersonListTableViewController: UITableViewController {
     
@@ -35,4 +38,17 @@ class PersonListTableViewController: UITableViewController {
         cell.textLabel?.text = "\(person.name) \(person.lastName)  aka - \(person.nickName)"
         return cell
     }
+    
+    func logoutUser() {
+        do { try Auth.auth().signOut() }
+        catch { print("already logged out") }
+        
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    //MARK: - Button
+    @IBAction func signoutBtn(_ sender: Any) {
+        logoutUser()
+    }
+    
 }
