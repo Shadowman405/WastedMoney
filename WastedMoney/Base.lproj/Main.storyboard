@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="1867.9389312977098" y="-2.1126760563380285"/>
         </scene>
-        <!--Person List Table View Controller-->
+        <!--Persons-->
         <scene sceneID="Fey-Sy-TGW">
             <objects>
                 <tableViewController id="JRP-Sr-pxf" customClass="PersonListTableViewController" customModule="WastedMoney" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,8 +91,8 @@
                             <outlet property="delegate" destination="JRP-Sr-pxf" id="g5i-p9-RfX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="r3c-IO-Xw3">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="r3r-wC-OGJ"/>
+                    <navigationItem key="navigationItem" title="Persons" id="r3c-IO-Xw3">
+                        <barButtonItem key="rightBarButtonItem" title="Signout" id="pxN-Ue-AyK"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
