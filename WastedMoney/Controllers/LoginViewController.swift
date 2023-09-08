@@ -26,7 +26,6 @@ class LoginViewController: UIViewController {
     }
     
 
-
     
     //MARK: - Funcs
     

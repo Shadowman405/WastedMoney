@@ -42,6 +42,7 @@
 		BF7B6D372AA4C939006E3B57 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B6D362AA4C939006E3B57 /* RegisterViewController.swift */; };
 		BF7B6D3A2AA645BB006E3B57 /* PersonListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B6D392AA645BB006E3B57 /* PersonListTableViewController.swift */; };
 		BF7B6D3D2AA64E4E006E3B57 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B6D3C2AA64E4E006E3B57 /* Person.swift */; };
+		BF84C63E2AAB6F8A00C3BEDC /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84C63D2AAB6F8A00C3BEDC /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		BF7B6D362AA4C939006E3B57 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		BF7B6D392AA645BB006E3B57 /* PersonListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListTableViewController.swift; sourceTree = "<group>"; };
 		BF7B6D3C2AA64E4E006E3B57 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		BF84C63D2AAB6F8A00C3BEDC /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		BF7B6CD62AA3AEBA006E3B57 /* WastedMoney */ = {
 			isa = PBXGroup;
 			children = (
+				BF84C63C2AAB6F7A00C3BEDC /* Helpers */,
 				BF7B6D3B2AA64E3D006E3B57 /* Model */,
 				BF7B6D382AA4C940006E3B57 /* Controllers */,
 				BF7B6CD72AA3AEBA006E3B57 /* AppDelegate.swift */,
@@ -197,6 +200,14 @@
 				BF7B6D3C2AA64E4E006E3B57 /* Person.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BF84C63C2AAB6F7A00C3BEDC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BF84C63D2AAB6F8A00C3BEDC /* FirebaseManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +371,7 @@
 			files = (
 				BF7B6D3D2AA64E4E006E3B57 /* Person.swift in Sources */,
 				BF7B6CDC2AA3AEBA006E3B57 /* LoginViewController.swift in Sources */,
+				BF84C63E2AAB6F8A00C3BEDC /* FirebaseManager.swift in Sources */,
 				BF7B6D3A2AA645BB006E3B57 /* PersonListTableViewController.swift in Sources */,
 				BF7B6CD82AA3AEBA006E3B57 /* AppDelegate.swift in Sources */,
 				BF7B6CDA2AA3AEBA006E3B57 /* SceneDelegate.swift in Sources */,
