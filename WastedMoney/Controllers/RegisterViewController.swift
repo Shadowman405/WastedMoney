@@ -18,13 +18,13 @@ class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         if FirebaseApp.app() == nil {
             FirebaseApp.configure()
         }
         
         emailRegTxtFld.keyboardType = .emailAddress
+        emailRegTxtFld.delegate = self
+        passRegTxtFld.delegate = self
     }
     
     @IBAction func RegisterTaped(_ sender: Any) {
@@ -45,5 +45,13 @@ class RegisterViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         alert.addAction(cancelAction)
         present(alert, animated: true)
+    }
+}
+
+//MARK: - Extensions
+
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 }
