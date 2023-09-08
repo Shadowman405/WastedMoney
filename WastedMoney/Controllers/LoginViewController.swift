@@ -26,7 +26,10 @@ class LoginViewController: UIViewController {
         setupKeyboardHiding()
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        emailTxtFld.text = ""
+        passwordTxtFld.text = ""
+    }
     
     //MARK: - Funcs
     
