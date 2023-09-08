@@ -32,6 +32,8 @@ class RegisterViewController: UIViewController {
             firebaseManager.createUser(email: email, password: password) { success in
                 if success != true {
                     self.showAlert(alertTitle: "Error", alertMessage: "Please enter correct email")
+                    self.emailRegTxtFld.text = ""
+                    self.passRegTxtFld.text = ""
                 } else {
                     self.showAlert(alertTitle: "Success", alertMessage: "User succefully created")
                 }
