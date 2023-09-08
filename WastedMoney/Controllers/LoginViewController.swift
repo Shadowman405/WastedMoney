@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTxtFld: UITextField!
     
     private var isLogedIn = false
+    private let firebaseManager = FirebaseAuthManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,21 +47,16 @@ class LoginViewController: UIViewController {
     //MARK: - Buttons
 
     @IBAction func loginTaped(_ sender: Any) {
-        Auth.auth().addStateDidChangeListener { auth, user in
-            if user != nil {
-                self.isLogedIn = true
+        guard let email = emailTxtFld.text, let pass = passwordTxtFld.text else {return}
+        firebaseManager.signIn(email: email, pass: pass) { success in
+            if success == true {
+                self.performSegue(withIdentifier: "toPersons", sender: nil)
             } else {
-                self.isLogedIn = false
+                let alert = UIAlertController(title: "Error", message: "Wrong credentials", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+                alert.addAction(cancelAction)
+                self.present(alert, animated: true)
             }
-        }
-        
-        if isLogedIn == true {
-            self.performSegue(withIdentifier: "toPersons", sender: nil)
-        } else {
-            let alert = UIAlertController(title: "Error", message: "Wrong credentials", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-            alert.addAction(cancelAction)
-            present(alert, animated: true)
         }
     }
     
